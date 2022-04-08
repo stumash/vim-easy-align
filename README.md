@@ -124,7 +124,34 @@ Usage
 
 ### Flow of execution
 
-<img src="https://raw.githubusercontent.com/junegunn/i/master/easy-align/usage.png" width="469">
+```mermaid
+flowchart TD
+    N[Normal Mode] --> V1 & G1
+
+    subgraph p1 [.]
+        V1[Visual Mode]
+        V1 --> G2[ga]
+    end
+
+    subgraph p2 [.]
+        G1[ga] --> T[Text Object]
+    end
+
+    subgraph p3 [.]
+        V1 --> E[[:EasyAlign args]]
+    end
+
+    subgraph i [.]
+        direction RL
+        I[[Interactive Mode]] --> O((Optoin))
+        O --> I
+    end
+    G2 & T --> I
+    I --> |Ctrl-X| R[Regexp prompt]
+    I --> |Delimeter key| A
+    E --> A
+    R --> |Regexp| A[Aligned]
+```
 
 There are two ways to use easy-align.
 
