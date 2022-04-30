@@ -1,3 +1,7 @@
+I forked this repo just to see if I could make the diagram in the 'Flow of Execution' section nicer.
+
+It wasn't really nicer because mermaid (the github-native diagramming tool) is still under development and it will probably be a while before this diagram ends up getting rendered by github in a prettier way than it is now.
+
 vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
 ==============
 
